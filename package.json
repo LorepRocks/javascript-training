@@ -1,0 +1,16 @@
+{
+  "name": "javascript-training",
+  "version": "1.0.0",
+  "description": "Here I will collect all the challenges that I had to solve on interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "interviews",
+    "challenges"
+  ],
+  "author": "Lorena Rojas <lorenajrc@gmail.com>",
+  "license": "ISC"
+}
