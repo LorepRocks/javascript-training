@@ -43,3 +43,46 @@ The maximum number that could exists inside on the array in this case will be 3
 you have to count the number of times that number 3 appears in this case is 2
 You should return 2
 */
+
+const coordinates = ['5 3', '3 7', '4 1'];
+
+const array = [...coordinates];
+// get number of rows
+const rows= getRows(array, 0);
+// let's create a new array with size [rows]
+const biArray = new Array(rows);
+const result =init(coordinates);
+console.log(result);
+
+function init(arr){
+    if(arr.length === 0){
+        return arr;
+    }
+    let position = arr.shift().split(' ');
+    let rows  = parseInt(position[0]);
+    let columns = parseInt(position[1]);
+    fillData(rows, columns);
+    return init(arr);
+}
+
+function fillData(rows, columns){
+    // fill array
+}
+
+
+function getRows(coordinates, value){
+    if(coordinates.length === 0){
+        return value;
+    }
+    let item = coordinates.shift().split(' ');
+    let row = parseInt(item[0])
+    if(value === 0 || value < row){
+        value = row;
+    }
+    return getRows(coordinates, value);
+}
+
+
+
+
+
